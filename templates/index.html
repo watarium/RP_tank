@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta value="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Raspberry Pi Tank</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+      <h2>Raspberry Pi Tank Controller</h2>
+      <form action="/motor" method="post">
+          <button type="submit" name="action" value="forward" style="position: absolute; left: 15%; top: 15%" class="btn btn-primary">すすむ</button>
+          <button type="submit" name="action" value="left" style="position: absolute; left: 3%; top: 21%" class="btn btn-primary">ひだり</button>
+          <button type="submit" name="action" value="stop" style="position: absolute; left: 15%; top: 21%" class="btn btn-primary">とまる</button>
+          <button type="submit" name="action" value="right" style="position: absolute; left: 27%; top: 21%" class="btn btn-primary">み　ぎ</button>
+          <button type="submit" name="action" value="back" style="position: absolute; left: 15%; top: 27%" class="btn btn-primary">もどる</button>
+          <button type="submit" name="action" value="shot" style="position: absolute; left: 15%; top: 35%" class="btn btn-primary">わごむ</button>
+      </form>
+
+      <img width="70%" height="70%" src="{{url_for('video_feed') }}" style="position: absolute; left: 3%; top: 45%"></img>
+</body> 
+
+</html>
