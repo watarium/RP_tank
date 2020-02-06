@@ -7,15 +7,12 @@ GPIO.setup(gp_out, GPIO.OUT)
 servo = GPIO.PWM(gp_out, 50)
 servo.start(0.0)
 
-try:
-    while True:
-        print("input Duty Cycle (2.5 - 12)")
-        dc = float(input())
+servo.ChangeDutyCycle(4.0)
+time.sleep(0.5)
+servo.ChangeDutyCycle(12.0)
+time.sleep(0.5)
+servo.ChangeDutyCycle(4.0)
+time.sleep(0.5)
 
-        servo.ChangeDutyCycle(dc)
-        time.sleep(1)
-        servo.ChangeDutyCycle(0.0)
-
-except KeyboardInterrupt:
-    servo.stop()
-    GPIO.cleanup()
+servo.stop()
+GPIO.cleanup()

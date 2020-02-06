@@ -16,10 +16,6 @@ wiringpi.pinMode(right_back, 1)
 wiringpi.pinMode(left_forward, 1)
 wiringpi.pinMode(left_back, 1)
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(shot_gpio, GPIO.OUT)
-servo = GPIO.PWM(shot_gpio, 50)
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -62,11 +58,18 @@ def motor():
         wiringpi.digitalWrite(left_forward, 0)
         wiringpi.digitalWrite(left_back, 1)
     elif action == 'shot':
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(shot_gpio, GPIO.OUT)
+        servo = GPIO.PWM(shot_gpio, 50)
         servo.start(0.0)
-        servo.ChangeDutyCycle(12)
-        time.sleep(3)
-        servo.ChangeDutyCycle(6)
+        servo.ChangeDutyCycle(4.0)
+        time.sleep(0.5)
+        servo.ChangeDutyCycle(12.0)
+        time.sleep(0.5)
+        servo.ChangeDutyCycle(4.0)
+        time.sleep(0.5)
         servo.stop()
+        GPIO.cleanup()
     return render_template("index.html")
 
 @app.route('/video_feed')
