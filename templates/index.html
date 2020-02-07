@@ -12,15 +12,15 @@
 <body>
       <h2>Raspberry Pi Tank Controller</h2>
       <form action="/motor" method="post">
-          <button type="submit" name="action" value="forward" style="position: absolute; left: 15%; top: 15%" class="btn btn-primary">すすむ</button>
-          <button type="submit" name="action" value="left" style="position: absolute; left: 3%; top: 21%" class="btn btn-primary">ひだり</button>
-          <button type="submit" name="action" value="stop" style="position: absolute; left: 15%; top: 21%" class="btn btn-primary">とまる</button>
-          <button type="submit" name="action" value="right" style="position: absolute; left: 27%; top: 21%" class="btn btn-primary">み　ぎ</button>
-          <button type="submit" name="action" value="back" style="position: absolute; left: 15%; top: 27%" class="btn btn-primary">もどる</button>
-          <button type="submit" name="action" value="shot" style="position: absolute; left: 15%; top: 35%" class="btn btn-primary">わごむ</button>
+          <button type="submit" name="action" value="forward" style="font-size: 200%; position: absolute; left: 20%; top: 15%" class="btn btn-primary">すすむ</button>
+          <button type="submit" name="action" value="left" style="font-size: 200%; position: absolute; left: 3%; top: 24%" class="btn btn-primary">ひだり</button>
+          <button type="submit" name="action" value="stop" style="font-size: 200%; position: absolute; left: 20%; top: 24%" class="btn btn-primary">とまる</button>
+          <button type="submit" name="action" value="right" style="font-size: 200%; position: absolute; left: 37%; top: 24%" class="btn btn-primary">み　ぎ</button>
+          <button type="submit" name="action" value="back" style="font-size: 200%; position: absolute; left: 20%; top: 33%" class="btn btn-primary">もどる</button>
+          <button type="submit" name="action" value="shot" style="font-size: 200%; position: absolute; left: 20%; top: 42%" class="btn btn-primary">わごむ</button>
       </form>
 
-      <img width="70%" height="70%" src="{{url_for('video_feed') }}" style="position: absolute; left: 3%; top: 45%"></img>
+      <img width="70%" height="70%" src="{{url_for('video_feed') }}" style="position: absolute; left: 3%; top: 52%"></img>
 </body> 
 
 </html>
