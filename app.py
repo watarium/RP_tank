@@ -43,15 +43,15 @@ def motor():
         wiringpi.digitalWrite(left_forward, 0)
         wiringpi.digitalWrite(left_back, 0)
     elif action == 'left':
-        wiringpi.digitalWrite(right_forward, 0)
-        wiringpi.digitalWrite(right_back, 1)
-        wiringpi.digitalWrite(left_forward, 1)
-        wiringpi.digitalWrite(left_back, 0)
-    elif action == 'right':
         wiringpi.digitalWrite(right_forward, 1)
         wiringpi.digitalWrite(right_back, 0)
         wiringpi.digitalWrite(left_forward, 0)
         wiringpi.digitalWrite(left_back, 1)
+    elif action == 'right':
+        wiringpi.digitalWrite(right_forward, 0)
+        wiringpi.digitalWrite(right_back, 1)
+        wiringpi.digitalWrite(left_forward, 1)
+        wiringpi.digitalWrite(left_back, 0)
     elif action == 'back':
         wiringpi.digitalWrite(right_forward, 0)
         wiringpi.digitalWrite(right_back, 1)
